@@ -6,7 +6,6 @@ import PaxInputWrapper from '../PaxInputWrapper/PaxInputWrapper';
 import IngredientList from '../IngredientList/IngredientList';
 
 export interface IngredientProps {
-    recipe: { name: string; amount: string; unit: string; image: string; description: string; },
     ingredients: { name: string; amount: string; unit: string; image: string; description: string; }[]
     peopleAttending: number;
     setPeopleAttending: React.Dispatch<React.SetStateAction<number>>;
@@ -15,7 +14,6 @@ export interface IngredientProps {
 
 const IngredientWrapper: React.FC<IngredientProps> = (props) => {
 
-    const { recipe } = props;
     const { ingredients } = props;
     const { peopleAttending } = props;
     const { setPeopleAttending } = props;
@@ -26,7 +24,7 @@ const IngredientWrapper: React.FC<IngredientProps> = (props) => {
         <div className={styles.IngredientWrapperParent}>
 
             <div className={styles.recipeNameParent}>
-                <p className={styles.recipeName}>{recipe.name}</p>
+                <p className={styles.recipeName}>RecipeName</p>
             </div>
 
             <PaxInputWrapper

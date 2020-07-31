@@ -7,7 +7,6 @@ import IngredientCard from '../IngredientCard/IngredientCard';
 
 const HeadlinePictureWrapper: React.FC<IngredientProps> = (props) => {
 
-    const { recipe } = props;
     const { ingredients } = props;
     const { peopleAttending } = props;
     // const { setPeopleAttending } = props;
@@ -16,17 +15,20 @@ const HeadlinePictureWrapper: React.FC<IngredientProps> = (props) => {
     return (
         <div className={styles.HeadlinePictureWrapperParent}>
 
-            <p className={styles.HeadlinePictureWrapperHeadline}>{recipe.name}</p>
+            <p className={styles.HeadlinePictureWrapperHeadline}>RecipeName</p>
 
-            {
-                ingredients.map((item, index) => (
-                    <IngredientCard
-                        item={item}
-                        key={index}
-                        peopleAttending={peopleAttending}
-                    />
-                ))
-            }
+            <div className={styles.IngredientCardParent}>
+                {
+                    ingredients.map((item, index) => (
+                        <IngredientCard
+                            item={item}
+                            key={index}
+                            peopleAttending={peopleAttending}
+                        />
+                    ))
+                }
+            </div>
+
         </div>
     )
 }

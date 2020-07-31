@@ -8,7 +8,7 @@ const AppWrapper: React.FC = () => {
 
     const [peopleAttending, setPeopleAttending] = React.useState(4)
 
-    const recipeArray = [
+    const ingredients = [
         {
             name: "Sushireis",
             amount: "100",
@@ -28,12 +28,6 @@ const AppWrapper: React.FC = () => {
 
     // split array in recipe and ingredients
 
-    const recipe = recipeArray[0]
-
-    recipeArray.shift()
-
-    const ingredients = recipeArray
-
 
     return (
         <div className={styles.AppWrapperParent}>
@@ -41,7 +35,6 @@ const AppWrapper: React.FC = () => {
             <div className={styles.HeadlinePictureParent}>
 
                 <HeadlinePictureWrapper
-                    recipe={recipe}
                     ingredients={ingredients}
                     peopleAttending={peopleAttending}
                     setPeopleAttending={setPeopleAttending}
@@ -52,7 +45,6 @@ const AppWrapper: React.FC = () => {
             <div className={styles.seperationLine} />
 
             <IngredientWrapper
-                recipe={recipe}
                 ingredients={ingredients}
                 peopleAttending={peopleAttending}
                 setPeopleAttending={setPeopleAttending}
