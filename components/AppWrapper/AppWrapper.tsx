@@ -40,9 +40,9 @@ const AppWrapper: React.FC = () => {
                 <HeadlinePictureWrapper />
             </div>
 
-            <div>
-                <IngredientWrapper recipe={recipe} ingredients={ingredients} />
-            </div>
+
+            <IngredientWrapper recipe={recipe} ingredients={ingredients} />
+
 
         </div>
     )

@@ -1,0 +1,13 @@
+.IngredientWrapperParent {
+    width: 100%;
+
+    .recipeNameParent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        .recipeName {
+            font-size: 30px;
+        }
+    }
+}

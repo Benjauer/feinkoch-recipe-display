@@ -20,6 +20,10 @@ const IngredientWrapper: React.FC<IngredientWrapperProps> = (props) => {
     return (
         <div className={styles.IngredientWrapperParent}>
 
+            <div className={styles.recipeNameParent}>
+                <p className={styles.recipeName}>{recipe.name}</p>
+            </div>
+
             <PaxInputWrapper
                 peopleAttending={peopleAttending}
                 setPeopleAttending={setPeopleAttending}
