@@ -40,6 +40,7 @@ const AppWrapper: React.FC = () => {
                 <HeadlinePictureWrapper />
             </div>
 
+            <div className={styles.seperationLine} />
 
             <IngredientWrapper recipe={recipe} ingredients={ingredients} />
 

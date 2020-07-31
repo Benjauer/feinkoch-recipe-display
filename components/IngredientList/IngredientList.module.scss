@@ -1,11 +1,26 @@
 .IngredientList {
-    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .IngredientListItem {
         display: flex;
+        justify-content: center;
 
         .IngredientListText {
             margin: 0 2.5px;
+        }
+    }
+}
+
+/* media query tablet */
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+    .IngredientList {
+        
+        .IngredientListItem {
+            justify-content: start;
+            margin: 0 10px;
         }
     }
 }

@@ -2,5 +2,15 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 0 10px;
+    justify-content: center;
+}
+
+/* media query tablet */
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+
+    .PaxInputWrapperParent {
+        justify-content: start;
+        margin: 0 50px;
+    }
 }

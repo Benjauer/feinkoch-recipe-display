@@ -4,4 +4,27 @@
     .HeadlinePictureParent {
         display: none;
     }
+    
+    .seperationLine {
+        height: auto;
+        width: 2px;
+        background-color: black;
+        display: none;
+    }
+}
+
+/* media query tablet */
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+    .AppWrapperParent {
+
+        .HeadlinePictureParent {
+            display: block;
+            width: 140%;
+        }
+
+        .seperationLine {
+            display: block;
+        }
+    }
 }

@@ -17,8 +17,11 @@ const IngredientList: React.FC<IngredientListProps> = (props) => {
     return (
         <ul className={styles.IngredientList}>
             {
-                ingredients.map(item => (
-                    <li className={styles.IngredientListItem}>
+                ingredients.map((item, index) => (
+                    <li
+                        className={styles.IngredientListItem}
+                        key={index}
+                    >
                         <p className={styles.IngredientListText}>{parseInt(item.amount) * peopleAttending}</p>
                         <p className={styles.IngredientListText}>{item.unit}</p>
                         <p className={styles.IngredientListText}>{item.name}</p>
