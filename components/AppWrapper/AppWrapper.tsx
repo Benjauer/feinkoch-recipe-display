@@ -6,6 +6,8 @@ import IngredientWrapper from '../IngredientWrapper/IngredientWrapper';
 
 const AppWrapper: React.FC = () => {
 
+    const [peopleAttending, setPeopleAttending] = React.useState(4)
+
     const recipeArray = [
         {
             name: "Sushireis",
@@ -37,12 +39,25 @@ const AppWrapper: React.FC = () => {
         <div className={styles.AppWrapperParent}>
 
             <div className={styles.HeadlinePictureParent}>
-                <HeadlinePictureWrapper />
+
+                <HeadlinePictureWrapper
+                    recipe={recipe}
+                    ingredients={ingredients}
+                    peopleAttending={peopleAttending}
+                    setPeopleAttending={setPeopleAttending}
+                />
+
             </div>
 
             <div className={styles.seperationLine} />
 
-            <IngredientWrapper recipe={recipe} ingredients={ingredients} />
+            <IngredientWrapper
+                recipe={recipe}
+                ingredients={ingredients}
+                peopleAttending={peopleAttending}
+                setPeopleAttending={setPeopleAttending}
+
+            />
 
 
         </div>

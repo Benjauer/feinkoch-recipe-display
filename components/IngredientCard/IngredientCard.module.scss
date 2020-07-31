@@ -1,0 +1,14 @@
+.IngredientCardParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+
+    .IngredientImage {
+        width: 100%;
+    }
+
+    .IngredientCardText {
+        display: flex;
+    }
+}

@@ -5,18 +5,22 @@ import styles from './IngredientWrapper.module.scss';
 import PaxInputWrapper from '../PaxInputWrapper/PaxInputWrapper';
 import IngredientList from '../IngredientList/IngredientList';
 
-interface IngredientWrapperProps {
+export interface IngredientProps {
     recipe: { name: string; amount: string; unit: string; image: string; description: string; },
     ingredients: { name: string; amount: string; unit: string; image: string; description: string; }[]
+    peopleAttending: number;
+    setPeopleAttending: React.Dispatch<React.SetStateAction<number>>;
 }
 
 
-const IngredientWrapper: React.FC<IngredientWrapperProps> = (props) => {
+const IngredientWrapper: React.FC<IngredientProps> = (props) => {
 
     const { recipe } = props;
     const { ingredients } = props;
+    const { peopleAttending } = props;
+    const { setPeopleAttending } = props;
 
-    const [peopleAttending, setPeopleAttending] = React.useState(4)
+
 
     return (
         <div className={styles.IngredientWrapperParent}>
