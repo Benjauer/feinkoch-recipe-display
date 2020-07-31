@@ -1,0 +1,11 @@
+.IngredientList {
+    list-style: circle;
+
+    .IngredientListItem {
+        display: flex;
+
+        .IngredientListText {
+            margin: 0 2.5px;
+        }
+    }
+}

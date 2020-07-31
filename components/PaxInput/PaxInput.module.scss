@@ -1,6 +1,11 @@
 .PaxInputParent {
     margin: 0 5px;
 
+    .plusMinusButton {
+        border: 1px solid darkgrey;
+        background-color: #eeee;
+    }
+
 
     .paxInputInput {
         width: 20px;

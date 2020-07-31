@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './IngredientWrapper.module.scss';
 
 import PaxInputWrapper from '../PaxInputWrapper/PaxInputWrapper';
+import IngredientList from '../IngredientList/IngredientList';
 
 interface IngredientWrapperProps {
     recipe: { name: string; amount: string; unit: string; image: string; description: string; },
@@ -27,6 +28,11 @@ const IngredientWrapper: React.FC<IngredientWrapperProps> = (props) => {
             <PaxInputWrapper
                 peopleAttending={peopleAttending}
                 setPeopleAttending={setPeopleAttending}
+            />
+
+            <IngredientList
+                ingredients={ingredients}
+                peopleAttending={peopleAttending}
             />
         </div>
     )
